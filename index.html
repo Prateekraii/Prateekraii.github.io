@@ -2,86 +2,479 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Prateek Rai | Customer Support Executive</title>
+  <title>Prateek Rai | Customer Support & Chat Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Portfolio website of Prateek Rai, Customer Support & Chat Support Professional.">
   <style>
-    * {margin: 0; padding: 0; font-family: Arial, sans-serif; box-sizing: border-box;}
-    body {background: #0f172a; color: #e2e8f0; padding: 20px;}
-    .container {max-width: 900px; margin: auto; background: #1e293b; padding: 25px; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,0.5);}
-    h1 {font-size: 2.2rem; color: #38bdf8;}
-    p {line-height: 1.6;}
-    .subtitle {color: #94a3b8; margin-bottom: 10px;}
-    .section {margin-top: 25px;}
-    .buttons {margin-top: 15px; display: flex; flex-wrap: wrap; gap: 12px;}
-    .btn {
-      padding: 10px 18px;
-      background: #334155;
-      border: 1px solid #64748b;
-      color: #e2e8f0;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.2s;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    .btn:hover {background: #38bdf8; color: black; transform: scale(1.05);}
-    ul {margin-top: 10px; margin-left: 20px;}
-    li {margin-bottom: 6px;}
-    footer {margin-top: 25px; text-align: center; font-size: 0.85rem; color: #64748b;}
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 12px;
+      background: radial-gradient(circle at top left, #1d4ed8, #020617 50%, #0f172a 100%);
+      color: #e5e7eb;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 1100px;
+      background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), rgba(15, 23, 42, 0.98));
+      border-radius: 28px;
+      padding: 24px 22px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      backdrop-filter: blur(14px);
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.9);
+      margin-bottom: 18px;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 92px;
+      height: 92px;
+      flex-shrink: 0;
+    }
+
+    .avatar-border {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: conic-gradient(from 180deg, #38bdf8, #4f46e5, #22c55e, #38bdf8);
+      padding: 3px;
+    }
+
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 999px;
+      background: #020617;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #e5e7eb;
+    }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .head-main {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .head-main h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    .head-main .role {
+      margin-top: 4px;
+      color: #a5b4fc;
+      font-size: 0.98rem;
+    }
+
+    .head-main .location {
+      margin-top: 2px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.16);
+      color: #bbf7d0;
+      font-size: 0.78rem;
+    }
+
+    .tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .head-contact {
+      min-width: 230px;
+      font-size: 0.83rem;
+      color: #cbd5f5;
+    }
+
+    .head-contact div {
+      margin-bottom: 4px;
+    }
+
+    .head-contact a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    .head-contact a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.6fr 1.1fr;
+      gap: 18px;
+    }
+
+    section h2 {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 18px;
+      border: 1px solid rgba(75, 85, 99, 0.85);
+      padding: 14px 15px;
+    }
+
+    .card p {
+      font-size: 0.93rem;
+      line-height: 1.6;
+      color: #e5e7eb;
+    }
+
+    .buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      padding: 8px 13px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+      cursor: pointer;
+    }
+
+    .btn span {
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.9);
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: #020617;
+    }
+
+    .job {
+      margin-bottom: 12px;
+    }
+
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .job-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .job-company {
+      font-size: 0.86rem;
+      color: #a5b4fc;
+    }
+
+    .job-meta {
+      font-size: 0.78rem;
+      text-align: right;
+    }
+
+    .job-meta div:first-child {
+      color: #9ca3af;
+    }
+
+    .job-meta div:last-child {
+      color: #6b7280;
+    }
+
+    .job ul {
+      margin-top: 5px;
+      padding-left: 18px;
+    }
+
+    .job li {
+      font-size: 0.85rem;
+      color: #d1d5db;
+      margin-bottom: 3px;
+    }
+
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 5px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.85);
+      background: rgba(30, 64, 175, 0.75);
+      color: #e5e7eb;
+    }
+
+    .list {
+      list-style: none;
+      font-size: 0.86rem;
+    }
+
+    .list li {
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .list .label {
+      color: #e5e7eb;
+    }
+
+    .list .value {
+      color: #a5b4fc;
+      text-align: right;
+    }
+
+    footer {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(51, 65, 85, 0.9);
+      font-size: 0.78rem;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        padding: 18px 14px;
+        border-radius: 20px;
+      }
+
+      header {
+        flex-direction: row;
+      }
+
+      .head-contact {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="shell">
+    <header>
+      <div class="avatar-wrap">
+        <div class="avatar-border">
+          <div class="avatar-inner">
+            <!-- Upload your photo as 'profile.jpg' in the same folder as index.html -->
+            <img src="profile.jpg" alt="Profile photo of Prateek Rai" onerror="this.style.display='none'; this.parentElement.textContent='P';" />
+          </div>
+        </div>
+      </div>
 
-  <div class="container">
-    
-    <h1>👋 Hi, I'm Prateek Rai</h1>
-    <p class="subtitle">
-      Customer Support Specialist · Chat Support · Service Operations
-    </p>
+      <div class="head-main">
+        <h1>Prateek Rai</h1>
+        <div class="role">Customer Support & Chat Support Specialist</div>
+        <div class="location">Based in India · Flipkart & ShareChat Process Experience</div>
+        <div class="tag">
+          <span class="tag-dot"></span>
+          <span>Open to customer support & operations roles</span>
+        </div>
+      </div>
 
-    <p>
-      I help customers solve problems, stay calm, and avoid breaking their devices out of frustration 😅  
-      With experience from **Flipkart** and **ShareChat processes**, I handle customer queries, chat support,
-      refunds, troubleshooting, and multitasking like a pro.
-    </p>
+      <div class="head-contact">
+        <div>📞 <strong>Phone:</strong> +91 75658 23760</div>
+        <div>✉ <strong>Email:</strong> <a href="mailto:Sir.prateek@outlook.com">Sir.prateek@outlook.com</a></div>
+        <div>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/PrateekkRaiii" target="_blank">/in/PrateekkRaiii</a></div>
+      </div>
+    </header>
 
-    <div class="buttons">
-      <a class="btn" href="mailto:Sir.prateek@outlook.com">📩 Email Me</a>
-      <a class="btn" href="https://wa.me/917565823760" target="_blank">💬 WhatsApp</a>
-      <a class="btn" href="https://www.linkedin.com/in/PrateekkRaiii" target="_blank">🔗 LinkedIn</a>
-      <a class="btn" href="Prateek_Rai_Resume.pdf" download>📄 Download Resume</a>
-    </div>
+    <main>
+      <!-- LEFT SIDE -->
+      <div>
+        <section>
+          <h2>Summary</h2>
+          <div class="card">
+            <p>
+              Hi, I’m Prateek 👋 I help customers solve problems, stay calm, and avoid uninstalling apps out of frustration 😅.
+              I’ve worked on <strong>Flipkart</strong> and <strong>ShareChat</strong> processes, handling chat support,
+              refunds, vendor coordination, and daily “where is my order?” missions.
+            </p>
+            <p style="margin-top: 8px;">
+              I speak English, Hindi, and fluent “Customer Support language”: polite, clear, and solution-focused.
+              Always learning, always improving, always online (thanks to work) 💻.
+            </p>
+            <div class="buttons-row">
+              <a class="btn" href="mailto:Sir.prateek@outlook.com"><span>✉</span>Email</a>
+              <a class="btn" href="https://wa.me/917565823760" target="_blank"><span>💬</span>WhatsApp</a>
+              <a class="btn" href="https://www.linkedin.com/in/PrateekkRaiii" target="_blank"><span>🔗</span>LinkedIn</a>
+              <a class="btn" href="Prateek_Rai_Resume.pdf" download><span>📄</span>Download Resume</a>
+            </div>
+          </div>
+        </section>
 
-    <div class="section">
-      <h2>🧑‍💻 Experience</h2>
-      <ul>
-        <li><strong>Tech-Fi Technologies – ShareChat Process</strong> (Chat Support)</li>
-        <li><strong>iEnergizer – Flipkart Process</strong> (Customer Support & Vendor Handling)</li>
-      </ul>
-    </div>
+        <section>
+          <h2>Experience</h2>
+          <div class="card">
+            <div class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Customer Chat Support</div>
+                  <div class="job-company">Tech-Fi Technologies Pvt Ltd · ShareChat Process</div>
+                </div>
+                <div class="job-meta">
+                  <div>Aug 2025 – Dec 2025</div>
+                  <div>Gurugram, Haryana</div>
+                </div>
+              </div>
+              <ul>
+                <li>Handled multi-application chat support for platforms like ShareChat, Moj, Quick TV and Vibely.</li>
+                <li>Resolved user queries with quick and polite responses.</li>
+                <li>Managed multiple chats at once while maintaining quality and empathy.</li>
+                <li>Troubleshot app-related issues and guided users with clear steps.</li>
+              </ul>
+            </div>
 
-    <div class="section">
-      <h2>⚙️ Skills</h2>
-      <ul>
-        <li>Chat Support & Customer Handling</li>
-        <li>Refund Process & Ticket Resolution</li>
-        <li>Vendor / Returns Support</li>
-        <li>Communication (English + Hindi)</li>
-        <li>Patience Level: ✨ Unlimited (mostly 😅)</li>
-      </ul>
-    </div>
+            <div class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Customer Service Representative</div>
+                  <div class="job-company">iEnergizer IT Services Pvt Ltd · Flipkart Process</div>
+                </div>
+                <div class="job-meta">
+                  <div>Jul 2024 – Aug 2025</div>
+                  <div>Gurugram, Haryana</div>
+                </div>
+              </div>
+              <ul>
+                <li>Handled high-volume customer calls, queries, and order-related issues.</li>
+                <li>Worked in Service Returns team, guiding customers through refunds and return processes.</li>
+                <li>Promoted to Retail (Vendor Support) and coordinated with vendors for product returns.</li>
+                <li>Ensured smooth communication between customers, logistics, and vendors.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
 
-    <div class="section">
-      <h2>🎓 Education</h2>
-      <ul>
-        <li>10th – PR International School (CBSE)</li>
-        <li>12th – MB Singh Inter College (UP Board)</li>
-      </ul>
-    </div>
+      <!-- RIGHT SIDE -->
+      <div>
+        <section>
+          <h2>Skills</h2>
+          <div class="card">
+            <div class="pill-grid">
+              <span class="pill">Customer Support</span>
+              <span class="pill">Chat Support</span>
+              <span class="pill">Inbound Calls</span>
+              <span class="pill">Refund & Returns</span>
+              <span class="pill">Vendor Support</span>
+              <span class="pill">Issue Resolution</span>
+              <span class="pill">Multitasking</span>
+              <span class="pill">English & Hindi</span>
+              <span class="pill">Soft Skills & Empathy</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="card">
+            <ul class="list">
+              <li>
+                <span class="label">10th · PR International School</span>
+                <span class="value">CBSE Board</span>
+              </li>
+              <li>
+                <span class="label">12th · MB Singh Inter College</span>
+                <span class="value">UP Board</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Quick Info</h2>
+          <div class="card">
+            <ul class="list">
+              <li>
+                <span class="label">Location</span>
+                <span class="value">Ghazipur · Gurugram (Work)</span>
+              </li>
+              <li>
+                <span class="label">Preferred Roles</span>
+                <span class="value">Customer Support, Chat Support, Operations</span>
+              </li>
+              <li>
+                <span class="label">Availability</span>
+                <span class="value">Immediate / As discussed</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <footer>
-      © 2025 · Built by Prateek Rai 🚀
+      © <span id="year"></span> · Built by Prateek Rai · “Ctrl + C & Ctrl + V helped a lot” 😅
     </footer>
   </div>
 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
