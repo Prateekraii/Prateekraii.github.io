@@ -32,6 +32,7 @@ header{
   100%{background-position:0% 50%}
 }
   @keyframes slideInUp { 0% { opacity:0; transform:translateY(30px); } 100% { opacity:1; transform:translateY(0); } }
+  @keyframes gradientShift { 0% { background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(250,204,21,0.1)); } 50% { background:linear-gradient(135deg,rgba(250,204,21,0.2),rgba(37,99,235,0.1)); } 100% { background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(250,204,21,0.1)); } }
 
 header img{
   width:190px;
@@ -191,7 +192,7 @@ I don’t edit to look cool — I edit so the viewer stops, stays, and trusts th
 
 <section class="fade" id="contact">
 <h2>Contact</h2>
-<div style="text-align:center;line-height:2.5;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(250,204,21,0.1));padding:40px 20px;border-radius:15px;margin:20px;box-shadow:0 8px 32px rgba(37,99,235,0.15);animation:slideInUp 0.8s ease-out;border:2px solid rgba(37,99,235,0.3);transition:all 0.3s ease;">
+<div style="text-align:center;line-height:2.5;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(250,204,21,0.1));padding:40px 20px;border-radius:15px;margin:20px;box-shadow:0 8px 32px rgba(37,99,235,0.15);animation:slideInUp 0.8s ease-out,gradientShift 8s infinite;border:2px solid rgba(37,99,235,0.3);transition:all 0.3s ease;">
 <a href="tel:+917011833533">📞 7011833533</a><br>
 <a href="mailto:Sir.prateek@outlook.com">✉️ Sir.prateek@outlook.com</a>
   <a href="https://wa.me/919899102809" target="_blank">📱 WhatsApp: 9899102809</a><br>
@@ -236,6 +237,7 @@ document.querySelectorAll(".fade").forEach(el=>obs.observe(el));
 
 </body>
   </html>
+
 
 
 
