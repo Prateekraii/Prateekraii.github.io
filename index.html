@@ -79,6 +79,7 @@ h2{
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:25px;
 }
+  /* SERVICE CARDS HEAVY ANIMATIONS */.service-card{animation:serviceCardEnter 0.7s cubic-bezier(0.34,1.56,0.64,1) forwards;opacity:0;} .service-card[data-card="1"]{animation-delay:0s;} .service-card[data-card="2"]{animation-delay:0.15s;} .service-card[data-card="3"]{animation-delay:0.3s;} .service-card[data-card="4"]{animation-delay:0.45s;} .service-card[data-card="5"]{animation-delay:0.6s;} .service-card[data-card="6"]{animation-delay:0.75s;} @keyframes serviceCardEnter{0%{opacity:0;transform:translateY(50px) rotateX(-15deg) scale(0.85);} 50%{transform:translateY(-5px) rotateX(5deg);} 100%{opacity:1;transform:translateY(0) rotateX(0) scale(1);}} .service-card:hover{animation:serviceCardHover 0.5s ease-out forwards!important;transform:translateY(-15px) rotateY(5deg) scale(1.08)!important;box-shadow:0 25px 50px rgba(37,99,235,0.3)!important;} @keyframes serviceCardHover{0%{transform:translateY(0) rotateY(0) scale(1);} 100%{transform:translateY(-15px) rotateY(5deg) scale(1.08);}} .service-card h3{color:#facc15;font-size:18px;transition:all 0.3s ease;} .service-card p{transition:all 0.3s ease;font-size:14px;} .service-card:hover h3{color:#2563eb;text-shadow:0 0 10px rgba(37,99,235,0.5);} .service-card:hover p{color:#e2e8f0;}
 
 .card{
   background:#020617;
@@ -138,12 +139,12 @@ I don’t edit to look cool — I edit so the viewer stops, stays, and trusts th
 <section class="fade">
 <h2>Services</h2>
 <div class="grid">
-  <div class="card"><h3>Instagram Reels Editing</h3><p>High-retention reels.</p></div>
-  <div class="card"><h3>YouTube Shorts Editing</h3><p>Watch-time focused edits.</p></div>
-  <div class="card"><h3>Social Media Management</h3><p>Posting & engagement.</p></div>
-  <div class="card"><h3>Customer Support</h3><p>Chat & voice support.</p></div>
-  <div class="card"><h3>CRM & Tools</h3><p>Tickets & reporting.</p></div>
-  <div class="card"><h3>Excel & Reporting</h3><p>Tracking & analysis.</p></div>
+  <div class="card service-card" data-card="1"><h3>Instagram Reels Editing</h3><p>High-retention reels with trending effects, perfect pacing, and hooks that stop the scroll. Every frame counts.</p></div>
+		<div class="card service-card" data-card="2"><h3>YouTube Shorts Editing</h3><p>Watch-time optimized shorts designed to maximize viewer retention and engagement throughout the entire clip.</p></div>
+		<div class="card service-card" data-card="3"><h3>Social Media Management</h3><p>Strategic posting schedules, content optimization, engagement tracking, and audience growth strategies.</p></div>
+		<div class="card service-card" data-card="4"><h3>Customer Support Excellence</h3><p>24/7 chat & voice support with bilingual capability. Professional communication across all platforms.</p></div>
+		<div class="card service-card" data-card="5"><h3>CRM & Ticketing Systems</h3><p>Expert in Intercom, ticket management, customer database organization, and support workflow optimization.</p></div>
+		<div class="card service-card" data-card="6"><h3>Excel & Data Analytics</h3><p>Advanced reporting, data visualization, KPI tracking, and actionable insights from complex datasets.</p></div>
 
 </div>
 </section>
@@ -245,6 +246,7 @@ setTimeout(()=>type(),index*400);}setTimeout(()=>{for(let i=0;i<6;i++)typeTestim
 
 </body>
   </html>
+
 
 
 
