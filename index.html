@@ -1,630 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Prateek Rai | Customer Support & Chat Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Modern portfolio website of Prateek Rai, Customer Support & Chat Support professional with experience in Flipkart and ShareChat processes."
-  />
-  <style>
-    :root {
-      /* Default = Modern Orange Theme */
-      --bg: #020617;
-      --card-bg: rgba(15, 23, 42, 0.86);
-      --border: rgba(248, 189, 120, 0.5);
-      --accent: #ff7a1a;
-      --accent-soft: rgba(255, 122, 26, 0.18);
-      --accent-strong: #ffb347;
-      --text-main: #f9fafb;
-      --text-soft: #cbd5f5;
-      --pill-bg: rgba(255, 122, 26, 0.32);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prateek Rai | Video Editor & Social Media Specialist</title>
 
-    /* Hindu / Traditional mode overrides */
-    body.traditional-mode {
-      --bg: #111827;
-      --card-bg: rgba(15, 23, 42, 0.94);
-      --border: rgba(255, 193, 120, 0.7);
-      --accent: #ff8800;
-      --accent-soft: rgba(255, 136, 0, 0.22);
-      --accent-strong: #ffd27f;
-      --text-main: #fff7ed;
-      --text-soft: #fed7aa;
-      --pill-bg: rgba(255, 136, 0, 0.35);
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0b1220;
+  color:#f8fafc;
+  font-weight:600;
+}
 
-    body {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top left, rgba(255, 138, 76, 0.7) 0, transparent 55%),
-        radial-gradient(circle at bottom right, rgba(255, 196, 120, 0.6) 0, transparent 55%),
-        linear-gradient(160deg, var(--bg), #020617 54%, #020617);
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      padding: 18px 10px;
-      color: var(--text-main);
-      transition: background 0.35s ease;
-    }
+/* HEADER */
+header{
+  padding:100px 20px;
+  text-align:center;
+  background:linear-gradient(270deg,#2563eb,#facc15,#2563eb);
+  background-size:600% 600%;
+  animation:gradientMove 12s ease infinite;
+}
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
-    .page {
-      width: 100%;
-      max-width: 1100px;
-      margin: auto;
-      border-radius: 28px;
-      background: radial-gradient(circle at top left, rgba(255, 237, 213, 0.18), var(--card-bg));
-      border: 1px solid var(--border);
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9);
-      backdrop-filter: blur(18px);
-      padding: 20px 20px 18px 20px;
-      transition: border 0.3s ease, background 0.3s ease;
-    }
+/* DP – bigger + black outline (ONLY CHANGE) */
+header img{
+  width:190px;
+  height:250px;
+  border-radius:22px;
+  object-fit:cover;
+  margin-bottom:28px;
+  background:#020617;
+  border:4px solid #000;
+  box-shadow:0 22px 45px rgba(0,0,0,.55);
+}
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid rgba(55, 65, 81, 0.95);
-      margin-bottom: 12px;
-    }
+header h1{font-size:44px;margin:10px 0}
+header p{font-size:18px;max-width:820px;margin:auto;color:#0b1220}
 
-    .logo-text {
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
+/* CTA */
+.cta a{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 38px;
+  background:#000;color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:700;
+  transition:.3s;
+}
+.cta a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(0,0,0,.5);
+}
 
-    .logo-dot {
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      margin-left: 4px;
-      box-shadow: 0 0 10px rgba(255, 158, 57, 0.8);
-    }
+/* SECTIONS */
+section{max-width:1200px;margin:auto;padding:80px 20px}
+h2{
+  font-size:32px;margin-bottom:20px;
+  border-left:6px solid #facc15;padding-left:15px;
+}
 
-    .nav {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
 
-    .nav a,
-    .nav button {
-      font-size: 0.78rem;
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 999px;
-      color: var(--text-soft);
-      border: 1px solid transparent;
-      background: transparent;
-      cursor: pointer;
-      transition: 0.15s ease;
-    }
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  padding:25px;border-radius:16px;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(250,204,21,.15);
+}
+.card h3{color:#facc15;margin-bottom:10px}
+.card p{font-size:14px;color:#cbd5f5}
+img{width:100%;border-radius:14px}
+a{color:#38bdf8;text-decoration:none}
 
-    .nav a:hover {
-      border-color: rgba(248, 189, 120, 0.8);
-      background: rgba(15, 23, 42, 0.92);
-      color: var(--text-main);
-    }
+/* FADE */
+.fade{opacity:0;transform:translateY(30px);transition:.8s}
+.fade.show{opacity:1;transform:translateY(0)}
 
-    .nav a.primary {
-      border-color: rgba(248, 189, 120, 0.9);
-      background: rgba(15, 23, 42, 0.98);
-      color: var(--text-main);
-    }
-
-    .nav a.primary:hover {
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: #1f2933;
-      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.95);
-    }
-
-    .nav button {
-      border-color: rgba(248, 189, 120, 0.7);
-      background: rgba(15, 23, 42, 0.96);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .nav button:hover {
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: #1f2933;
-      box-shadow: 0 10px 32px rgba(15, 23, 42, 0.9);
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.2fr);
-      gap: 20px;
-    }
-
-    /* HERO / LEFT */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .hero-main {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .avatar-wrap {
-      position: relative;
-      width: 96px;
-      height: 96px;
-      flex-shrink: 0;
-    }
-
-    .avatar-ring {
-      position: absolute;
-      inset: 0;
-      border-radius: 999px;
-      background: conic-gradient(from 220deg, var(--accent), var(--accent-strong), #ffe4b5, var(--accent));
-      padding: 3px;
-      box-shadow: 0 0 18px rgba(248, 189, 120, 0.8);
-    }
-
-    .avatar-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 999px;
-      background: #020617;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #f97316;
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    .avatar-inner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-text {
-      flex: 1;
-      min-width: 220px;
-    }
-
-    .hero-text h1 {
-      font-size: 2rem;
-      font-weight: 700;
-    }
-
-    .hero-role {
-      margin-top: 4px;
-      font-size: 1rem;
-      color: var(--accent-strong);
-    }
-
-    .hero-location {
-      margin-top: 3px;
-      font-size: 0.86rem;
-      color: var(--text-soft);
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 9px;
-      padding: 4px 11px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: #ffedd5;
-      font-size: 0.78rem;
-    }
-
-    .hero-tag-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 12px rgba(248, 189, 120, 0.9);
-    }
-
-    .hero-card {
-      margin-top: 6px;
-      background: var(--card-bg);
-      border-radius: 20px;
-      border: 1px solid rgba(248, 189, 120, 0.6);
-      padding: 14px 15px;
-    }
-
-    .hero-card p {
-      font-size: 0.94rem;
-      line-height: 1.6;
-    }
-
-    .hero-card p + p {
-      margin-top: 6px;
-    }
-
-    .btn-row {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      text-decoration: none;
-      color: var(--text-main);
-      background: rgba(15, 23, 42, 0.97);
-      border: 1px solid rgba(248, 189, 120, 0.8);
-      transition: 0.16s ease;
-    }
-
-    .btn span {
-      font-size: 1rem;
-    }
-
-    .btn:hover {
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: #1f2933;
-      transform: translateY(-1px);
-      box-shadow: 0 12px 36px rgba(15, 23, 42, 0.98);
-    }
-
-    /* RIGHT / SECTIONS */
-    .card {
-      background: var(--card-bg);
-      border-radius: 20px;
-      border: 1px solid rgba(248, 189, 120, 0.6);
-      padding: 14px 15px;
-      margin-bottom: 12px;
-    }
-
-    .card h2 {
-      font-size: 0.9rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      margin-bottom: 8px;
-    }
-
-    .pill-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .pill {
-      font-size: 0.78rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: var(--pill-bg);
-      border: 1px solid rgba(250, 204, 149, 0.9);
-      color: var(--text-main);
-      white-space: nowrap;
-    }
-
-    .experience-item {
-      margin-bottom: 10px;
-    }
-
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
-
-    .exp-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .exp-company {
-      font-size: 0.86rem;
-      color: var(--accent-strong);
-    }
-
-    .exp-meta {
-      font-size: 0.78rem;
-      text-align: right;
-      color: var(--text-soft);
-    }
-
-    .exp-meta div + div {
-      color: #f97316;
-      opacity: 0.8;
-    }
-
-    /* 🔸 NO BULLET DOTS – ORANGE LINE STYLE */
-    .experience-item ul {
-      margin-top: 6px;
-      padding-left: 0;
-      list-style: none;
-    }
-
-    .experience-item li {
-      font-size: 0.85rem;
-      color: #fee2c5;
-      margin-bottom: 6px;
-      padding-left: 12px;
-      border-left: 3px solid var(--accent);
-    }
-
-    .list {
-      list-style: none;
-      font-size: 0.86rem;
-    }
-
-    .list li {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 5px;
-    }
-
-    .list .label {
-      color: var(--text-main);
-    }
-
-    .list .value {
-      color: var(--accent-strong);
-      text-align: right;
-    }
-
-    .small {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    footer {
-      margin-top: 14px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(55, 65, 81, 0.98);
-      font-size: 0.78rem;
-      text-align: center;
-      color: #9ca3af;
-    }
-
-    footer span.accent {
-      color: var(--accent-strong);
-    }
-
-    @media (max-width: 900px) {
-      .content {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .page {
-        padding: 16px 14px 14px 14px;
-        border-radius: 22px;
-      }
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav {
-        justify-content: flex-start;
-      }
-    }
-  </style>
+@media(max-width:768px){
+  header h1{font-size:34px}
+}
+</style>
 </head>
+
 <body>
-  <div class="page">
-    <!-- TOP NAV -->
-    <div class="topbar">
-      <div class="logo-text">
-        PRATEEK RAI <span class="logo-dot"></span>
-      </div>
-      <div class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="primary">Contact</a>
-        <button id="themeToggle" type="button">🕉 Hindu</button>
-      </div>
-    </div>
 
-    <div class="content">
-      <!-- LEFT SIDE: HERO + ABOUT -->
-      <div class="hero">
-        <div class="hero-main">
-          <div class="avatar-wrap">
-            <div class="avatar-ring">
-              <div class="avatar-inner">
-                <!-- profile.jpg must be in same folder as index.html -->
-                <img src="profile.jpg" alt="Profile photo of Prateek Rai"
-                     onerror="this.style.display='none'; this.parentElement.textContent='P';" />
-              </div>
-            </div>
-          </div>
-          <div class="hero-text">
-            <h1 id="about">Hi, I’m Prateek Rai 👋</h1>
-            <div class="hero-role">Customer Support & Chat Support Specialist</div>
-            <div class="hero-location">India · Experience with Flipkart & ShareChat processes</div>
-            <div class="hero-tag">
-              <span class="hero-tag-dot"></span>
-              <span>Open to Customer Support & Operations roles</span>
-            </div>
-          </div>
-        </div>
+<header>
+  <img src="profile.jpg" alt="Prateek Rai">
+  <h1>Prateek Rai</h1>
+  <p id="typeText"></p>
+  <div class="cta"><a href="#contact">Work With Me</a></div>
+</header>
 
-        <div class="hero-card">
-          <p>
-            I help customers solve problems, stay calm, and avoid uninstalling apps out of frustration 😅.
-            I’ve worked on <strong>Flipkart</strong> and <strong>ShareChat</strong> processes, handling chat support,
-            refunds, vendor coordination, and everyday “Where is my order?” moments.
-          </p>
-          <p>
-            I speak English, Hindi, and fluent “Customer Support language”: polite, clear, and solution-focused.
-            Always learning, always improving, always online (thanks to work) 💻.
-          </p>
-          <div class="btn-row">
-            <a class="btn" href="mailto:Sir.prateek@outlook.com"><span>✉</span>Email</a>
-            <a class="btn" href="https://wa.me/917565823760 AND 919899102809" target="_blank"><span>💬</span>WhatsApp</a>
-            <a class="btn" href="https://www.linkedin.com/in/PrateekkRaiii" target="_blank"><span>🔗</span>LinkedIn</a>
-            <a class="btn" href="Prateek.rai.resume.pdf" download><span>📄</span>Resume</a>
-          </div>
-        </div>
-      </div>
+<section class="fade">
+<h2>About Me</h2>
+<p>
+I’m a short-form video editor focused on one thing — <strong>keeping people watching</strong>.
+My edits are built around strong hooks, clean cuts, pacing, and retention — not random effects or over-editing.
+</p>
+<p>
+I actively work with <strong>Instagram Reels</strong> and <strong>YouTube Shorts</strong>, understanding how attention span,
+algorithms, and viewer behaviour actually work. Every edit is designed to feel natural,
+fast, and complete till the last second.
+</p>
+<p>
+Alongside creative work, I bring <strong>1.5+ years of professional customer support experience</strong>
+with platforms like Flipkart and ShareChat. This trained me in clear communication,
+pressure handling, and accountability.
+</p>
+<p>
+I’m comfortable with <strong>CRM tools</strong>, <strong>basic Excel reporting</strong>,
+<strong>chat-based workflows</strong>, and <strong>bilingual communication (English & Hindi)</strong>,
+which helps me manage content, communities, and expectations smoothly.
+</p>
+</section>
 
-      <!-- RIGHT SIDE: SKILLS / EXPERIENCE / INFO -->
-      <div>
-        <div class="card" id="skills">
-          <h2>Skills</h2>
-          <div class="pill-grid">
-            <span class="pill">Customer Support</span>
-            <span class="pill">Chat Support</span>
-            <span class="pill">Inbound Calls</span>
-            <span class="pill">Refund & Returns</span>
-            <span class="pill">Vendor Support</span>
-            <span class="pill">Issue Resolution</span>
-            <span class="pill">Soft Skills & Empathy</span>
-            <span class="pill">Multitasking</span>
-            <span class="pill">English & Hindi</span>
-          </div>
-        </div>
+<section class="fade">
+<h2>Editing Philosophy</h2>
+<p style="color:#facc15;font-style:italic;font-size:18px;">
+I don’t edit to look cool — I edit so the viewer stops, stays, and trusts the content.
+</p>
+</section>
 
-        <div class="card" id="experience">
-          <h2>Experience</h2>
+<section class="fade">
+<h2>Services</h2>
+<div class="grid">
+  <div class="card"><h3>Instagram Reels Editing</h3><p>High-retention reels with hooks, clean cuts, captions, and pacing.</p></div>
+  <div class="card"><h3>YouTube Shorts Editing</h3><p>Watch-time focused short-form edits for engagement.</p></div>
+  <div class="card"><h3>Social Media Management</h3><p>Posting strategy, engagement, and DM handling.</p></div>
+  <div class="card"><h3>Customer Support</h3><p>Professional chat & voice support.</p></div>
+  <div class="card"><h3>CRM & Tools Management</h3><p>Tickets, follow-ups, reporting.</p></div>
+  <div class="card"><h3>Basic Excel & Reporting</h3><p>Tracking sheets and ops data.</p></div>
+</div>
+</section>
 
-          <div class="experience-item">
-            <div class="exp-header">
-              <div>
-                <div class="exp-title">Customer Chat Support</div>
-                <div class="exp-company">Tech-Fi Technologies Pvt Ltd · ShareChat Process</div>
-              </div>
-              <div class="exp-meta">
-                <div>Aug 2025 – Dec 2025</div>
-                <div>Gurugram, Haryana</div>
-              </div>
-            </div>
-            <ul>
-              <li>Handled multi-app chat support for platforms like ShareChat, Moj, Quick TV and Vibely.</li>
-              <li>Resolved user queries with quick, accurate and friendly responses.</li>
-              <li>Managed multiple chats at once while maintaining quality and empathy.</li>
-              <li>Troubleshot app issues and guided users with simple, clear steps.</li>
-            </ul>
-          </div>
+<section class="fade">
+<h2>My Work & Edits</h2>
 
-          <div class="experience-item">
-            <div class="exp-header">
-              <div>
-                <div class="exp-title">Customer Service Representative</div>
-                <div class="exp-company">iEnergizer IT Services Pvt Ltd · Flipkart Process</div>
-              </div>
-              <div class="exp-meta">
-                <div>Jul 2024 – Aug 2025</div>
-                <div>Gurugram, Haryana</div>
-              </div>
-            </div>
-            <ul>
-              <li>Handled high-volume customer calls and order-related issues for Flipkart users.</li>
-              <li>Worked in Service Returns team, guiding customers through refunds and returns.</li>
-              <li>Promoted to Retail (Vendor Support) and coordinated with vendors for product returns.</li>
-              <li>Ensured smooth communication between customers, logistics and vendors.</li>
-            </ul>
-          </div>
-        </div>
+<p style="color:#cbd5f5;font-size:16px;margin-bottom:30px;">
+Strong hooks. Clean pacing. Edits that make people stop scrolling.
+</p>
 
-        <div class="card" id="contact">
-          <h2>Quick Info</h2>
-          <ul class="list">
-            <li>
-              <span class="label">Location</span>
-              <span class="value">Gurugram (Work)</span>
-            </li>
-            <li>
-              <span class="label">Preferred Roles</span>
-              <span class="value">Customer Support, Chat Support, Operations</span>
-            </li>
-            <li>
-              <span class="label">Contact</span>
-              <span class="value small">📧 Sir.prateek@outlook.com · 📞 +91 7565823760 & +91 9899102809</span>
-            </li>
-          </ul>
-        </div>
+<!-- ADDED HEADINGS ONLY (NO OTHER CHANGE) -->
+<h3 style="color:#facc15;margin:10px 0 20px;">YouTube Edits</h3>
+<div class="grid">
+  <div class="card"><a href="https://youtube.com/shorts/KsJma0ioKQg" target="_blank">
+    <img src="https://img.youtube.com/vi/KsJma0ioKQg/maxresdefault.jpg"></a></div>
+  <div class="card"><a href="https://youtube.com/shorts/5qU9EMt8uBk" target="_blank">
+    <img src="https://img.youtube.com/vi/5qU9EMt8uBk/maxresdefault.jpg"></a></div>
+  <div class="card"><a href="https://youtube.com/shorts/8fv_Y7yijPY" target="_blank">
+    <img src="https://img.youtube.com/vi/8fv_Y7yijPY/maxresdefault.jpg"></a></div>
+</div>
 
-        <div class="card">
-          <h2>Education</h2>
-          <ul class="list">
-            <li>
-              <span class="label">10th · PR International School</span>
-              <span class="value">CBSE Board</span>
-            </li>
-            <li>
-              <span class="label">12th · MBS intermidiate College </span>
-              <span class="value">UP Board</span>
-              </li>
-            <li>
-              <span class="label">Persuing BSC in Computer science ( 3rd Year )</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<h3 style="color:#facc15;margin:40px 0 20px;">Instagram Reels</h3>
+<div class="grid">
+  <div class="card"><a href="https://www.instagram.com/reel/DLBmE2oy4Vm/" target="_blank">
+    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868"></a></div>
+  <div class="card"><a href="https://www.instagram.com/reel/DKlQrTHyFal/" target="_blank">
+    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02"></a></div>
+  <div class="card"><a href="https://www.instagram.com/reel/DM-ddyzRkZF/" target="_blank">
+    <img src="https://images.unsplash.com/photo-1607082352121-fa243f3dde32"></a></div>
+</div>
+</section>
 
-    <footer>
-      © <span id="year"></span> · <span class="accent">Prateek Rai</span> · Built with HTML &amp; CSS ·
-      “Ctrl + C &amp; Ctrl + V helped a lot” 😅
-    </footer>
-  </div>
+<section class="fade" id="contact">
+<h2>Contact</h2>
+<div style="text-align:center;line-height:1.9">
+  <a href="tel:+917011833533">📞 Call: 7011833533</a><br>
+  <a href="https://wa.me/917011833533" target="_blank">💬 WhatsApp: 7011833533</a><br>
+  <a href="https://wa.me/917565823760" target="_blank">💬 WhatsApp: 7565823760</a><br>
+  <a href="mailto:Sir.prateek@outlook.com">✉️ Sir.prateek@outlook.com</a><br><br>
+  <a href="https://instagram.com/prateekraiiii" target="_blank">Instagram</a> |
+  <a href="https://instagram.com/mememinati.in" target="_blank">Insta Page</a> |
+  <a href="https://www.youtube.com/@Soulcastic_" target="_blank">YouTube</a> |
+  <a href="https://www.linkedin.com/in/prateekkraiii" target="_blank">LinkedIn</a> |
+  <a href="https://www.facebook.com/share/1Tsg3S9UyW/" target="_blank">Facebook</a>
+</div>
+</section>
 
-  <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
+<footer style="text-align:center;padding:40px;background:#020617;color:#64748b">
+© 2025 Prateek Rai · All Rights Reserved
+</footer>
 
-    // Smooth scroll for nav links
-    document.querySelectorAll('.nav a[href^="#"]').forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const targetId = link.getAttribute("href").slice(1);
-        const el = document.getElementById(targetId);
-        if (!el) return;
-        window.scrollTo({
-          top: el.getBoundingClientRect().top + window.scrollY - 40,
-          behavior: "smooth"
-        });
-      });
-    });
+<script>
+/* TYPEWRITER */
+const text="Video Editor · Social Media Handler · Customer Support Professional";
+let i=0;
+(function type(){
+ if(i<text.length){
+  document.getElementById("typeText").innerHTML+=text.charAt(i++);
+  setTimeout(type,35);
+ }
+})();
 
-    // 🕉 Hindu / Modern theme toggle
-    const toggleBtn = document.getElementById("themeToggle");
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("traditional-mode");
-      const isTrad = document.body.classList.contains("traditional-mode");
-      toggleBtn.textContent = isTrad ? "🕉 Modern mode" : "🕉 Hindu mode";
-    });
-  </script>
+/* FADE */
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{ if(x.isIntersecting) x.target.classList.add("show"); });
+},{threshold:.2});
+document.querySelectorAll(".fade").forEach(el=>obs.observe(el));
+</script>
+
 </body>
 </html>
-
-
-
