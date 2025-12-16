@@ -98,6 +98,7 @@ a{color:#38bdf8;text-decoration:none}
 /* FADE */
 .fade{opacity:0;transform:translateY(30px);transition:.8s}
 .fade.show{opacity:1;transform:translateY(0)}
+  /* TESTIMONIALS ANIMATIONS */ .testi-card{animation:testiSlide 0.6s ease-out forwards;opacity:0;} .testi-card[data-testi="0"]{animation-delay:0.1s;} .testi-card[data-testi="1"]{animation-delay:0.25s;} .testi-card[data-testi="2"]{animation-delay:0.4s;} .testi-card[data-testi="3"]{animation-delay:0.55s;} .testi-card[data-testi="4"]{animation-delay:0.7s;} .testi-card[data-testi="5"]{animation-delay:0.85s;} @keyframes testiSlide{0%{opacity:0;transform:translateY(20px) rotateX(-10deg);} 100%{opacity:1;transform:translateY(0) rotateX(0);}} .testi-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(37,99,235,0.2);} .testi-text{color:#facc15;min-height:60px;font-style:italic;font-size:15px;}
 
 @media(max-width:768px){
   header h1{font-size:34px}
@@ -181,16 +182,15 @@ I don’t edit to look cool — I edit so the viewer stops, stays, and trusts th
 
 <section class="fade" id="testimonials">
 <h2>Client Testimonials</h2>
-<div class="grid">
-  <div class="card"><p>"Engagement increased massively with better reach and customer interaction. The quality of work exceeded our expectations."</p><p style="color:#2563eb;">– Anika Sharma</p></div>
-  <div class="card"><p>"Professional & reliable with consistent communication. Delivers high-quality results on time every single time."</p><p style="color:#2563eb;">– Social Media Director</p></div>
-  <div class="card"><p>"Exceptional video quality and quick turnaround time. Highly impressed with the editing skills and attention to detail."</p><p style="color:#2563eb;">– Rajesh Patel</p></div>
-  <div class="card"><p>"Very professional communication and delivered results beyond expectations. The customer service is outstanding."</p><p style="color:#2563eb;">– Priya Verma</p></div>
-  <div class="card"><p>"Transformed our content strategy with amazing editing and support. Absolutely recommended for any social media needs."</p><p style="color:#2563eb;">– Arjun Singh</p></div>
-  <div class="card"><p>\"Fast, reliable, and incredibly talented. Our brand's growth accelerated significantly after working together. Highly recommended!\"</p><p style=\"color:#2563eb;\">– Deepak Khanna</p></div>
+<div class="grid" id="testimonials-grid">
+<div class="card testi-card" data-testi="0"><p class="testi-text"></p><p style="color:#2563eb;">– Anika Sharma</p></div>
+<div class="card testi-card" data-testi="1"><p class="testi-text"></p><p style="color:#2563eb;">– Social Media Director</p></div>
+<div class="card testi-card" data-testi="2"><p class="testi-text"></p><p style="color:#2563eb;">– Rajesh Patel</p></div>
+<div class="card testi-card" data-testi="3"><p class="testi-text"></p><p style="color:#2563eb;">– Priya Verma</p></div>
+<div class="card testi-card" data-testi="4"><p class="testi-text"></p><p style="color:#2563eb;">– Arjun Singh</p></div>
+<div class="card testi-card" data-testi="5"><p class="testi-text"></p><p style="color:#2563eb;">– Deepak Khanna</p></div>
 </div>
 </section>
-
 <section class="fade" id="contact">
 <h2>Contact</h2>
 <div style="text-align:center;line-height:2.5;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(250,204,21,0.1));padding:40px 20px;border-radius:15px;margin:20px;box-shadow:0 8px 32px rgba(37,99,235,0.15);animation:slideInUp 0.8s ease-out,gradientShift 8s infinite;border:2px solid rgba(37,99,235,0.3);transition:all 0.3s ease;">
@@ -234,10 +234,13 @@ document.querySelectorAll(".fade").forEach(el=>obs.observe(el));
   link.click();
   document.body.removeChild(link);
 }
+  const testimonials=['"Engagement increased massively with better reach and customer interaction. The quality of work exceeded our expectations."','"Professional & reliable with consistent communication. Delivers high-quality results on time every single time."','"Exceptional video quality and quick turnaround time. Highly impressed with the editing skills and attention to detail."','"Very professional communication and delivered results beyond expectations. The customer service is outstanding."','"Transformed our content strategy with amazing editing and support. Absolutely recommended for any social media needs."','"Fast, reliable, and incredibly talented. Our brand\'s growth accelerated significantly after working together. Highly recommended!"'];function typeTestimonial(index){const card=document.querySelector(`.testi-card[data-testi="${index}"]`);if(!card)return;const textEl=card.querySelector('.testi-text');const text=testimonials[index];let i=0;function type(){if(i<text.length){textEl.textContent+=text.charAt(i++);setTimeout(type,15);}}
+setTimeout(()=>type(),index*400);}setTimeout(()=>{for(let i=0;i<6;i++)typeTestimonial(i);},300);
 </script>
 
 </body>
   </html>
+
 
 
 
