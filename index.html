@@ -207,6 +207,41 @@ display:block;
 margin:10px 0;
 }
 }
+  /* HEAVY ANIMATIONS */
+.service-card{
+animation:slideInUp 0.8s ease-out backwards, floatHeavy 4s ease-in-out infinite;
+}
+@keyframes slideInUp{
+0%{opacity:0;transform:translateY(40px)}
+100%{opacity:1;transform:translateY(0)}
+}
+@keyframes floatHeavy{
+0%{transform:translateY(0px) scale(1)}
+25%{transform:translateY(-15px) scale(1.02)}
+50%{transform:translateY(0px) scale(1)}
+75%{transform:translateY(-15px) scale(1.02)}
+100%{transform:translateY(0px) scale(1)}
+}
+@keyframes pulseGlow{
+0%{box-shadow:0 0 10px rgba(37,99,235,0.3)}
+50%{box-shadow:0 0 30px rgba(37,99,235,0.8)}
+100%{box-shadow:0 0 10px rgba(37,99,235,0.3)}
+}
+.portfolio-item{
+animation:fadeInScale 0.9s ease-out;
+}
+@keyframes fadeInScale{
+0%{opacity:0;transform:scale(0.95)}
+100%{opacity:1;transform:scale(1)}
+}
+section h2{
+animation:slideDown 0.7s ease-out;
+}
+@keyframes slideDown{
+0%{opacity:0;transform:translateY(-30px)}
+100%{opacity:1;transform:translateY(0)}
+}
+
 </style>
 </head>
 <body>
@@ -249,6 +284,14 @@ Short-form video editor focused on watch-time, engagement and growth. I don't ed
 <div class="service-card">
 <h3>Video Research & Scripts</h3>
 <p>Full-cycle video production: scripting, editing, and thumbnail/hook optimization for maximum impact.</p>
+</div>
+  <div class="service-card">
+<h3>Digital Marketing & Campaign Strategy</h3>
+<p>Strategic content planning, market analysis, audience targeting, and campaign execution across social platforms. Data-driven approach to maximize reach, engagement, and conversion rates with measurable results.</p>
+</div>
+<div class="service-card">
+<h3>Social Media Handling & Community Management</h3>
+<p>End-to-end social media management including content creation, posting schedules, audience engagement, hashtag optimization, analytics tracking, and community growth strategy across Instagram, TikTok, YouTube, and other platforms.</p>
 </div>
 </section>
 
@@ -352,4 +395,5 @@ Your browser does not support the video tag.
 </footer>
 </body>
 </html>
+
 
