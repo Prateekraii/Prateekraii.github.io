@@ -67,6 +67,11 @@ text-decoration:none;
 font-weight:700;
 margin:6px;
 display:inline-block;
+transition:all .3s ease;
+}
+nav a:hover{
+transform:translateY(-6px) scale(1.05);
+background:#facc15;
 }
 
 /* SECTIONS */
@@ -74,6 +79,7 @@ section{
 padding:70px 20px;
 max-width:1000px;
 margin:auto;
+animation:fadeUp 1.3s ease both;
 }
 section h2{
 font-size:2.1rem;
@@ -96,6 +102,13 @@ border-left:4px solid #2563eb;
 border-radius:6px;
 margin:18px 0;
 box-shadow:0 6px 14px rgba(0,0,0,0.35);
+animation:fadeLeft 1.3s ease both;
+transition:all .4s ease;
+}
+.card:hover{
+transform:scale(1.04) rotate(-0.5deg);
+border-left-color:#facc15;
+box-shadow:0 0 35px rgba(250,204,21,.9);
 }
 
 /* PORTFOLIO */
@@ -107,6 +120,11 @@ gap:20px;
 video{
 width:100%;
 border-radius:6px;
+transition:all .4s ease;
+}
+video:hover{
+transform:scale(1.06);
+box-shadow:0 25px 60px rgba(37,99,235,.6);
 }
 
 /* FOOTER */
@@ -114,13 +132,30 @@ footer{
 padding:50px 20px;
 text-align:center;
 border-top:2px solid #1a2332;
+background:radial-gradient(circle at top,#1e293b,#020617);
+animation:fadeUp 1.5s ease both;
 }
 a.contact{
 color:#2563eb;
 text-decoration:none;
 font-weight:700;
 display:block;
-margin:10px 0;
+margin:12px 0;
+transition:all .35s ease;
+}
+a.contact:hover{
+transform:scale(1.12) translateX(8px);
+color:#facc15;
+}
+
+/* EXTRA ANIMATIONS */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeLeft{
+from{opacity:0;transform:translateX(-60px)}
+to{opacity:1;transform:translateX(0)}
 }
 </style>
 </head>
@@ -322,7 +357,6 @@ After process ramp-down on July 31 from Ienergizer, joined Tech-Fi Technologies 
 </section>
 
 <!-- CONTACT -->
-<footer id="contact">
 <h2>Contact</h2>
 
 <a class="contact" href="mailto:hello@prateekcreates.in">📧 hello@prateekcreates.in</a>
@@ -330,11 +364,20 @@ After process ramp-down on July 31 from Ienergizer, joined Tech-Fi Technologies 
 <a class="contact" href="https://wa.me/917011833533" target="_blank">💬 WhatsApp</a>
 <a class="contact" href="tel:7011833533">☎️ Call</a>
 
+<div style="margin-top:35px;">
+<h3>📄 Download Resume</h3>
+<a class="contact" href="Customer_Support_Resume.pdf" download>⬇️ Customer Support Resume</a>
+<a class="contact" href="Video_Editing_Resume.pdf" download>⬇️ Video Editing Resume</a>
+<a class="contact" href="Social_Media_Handler_Resume.pdf" download>⬇️ Social Media Handling Resume</a>
+</div>
+
 <p style="color:#6b7280;font-size:0.9rem;">Available for freelance, contract, and full-time roles</p>
 </footer>
 
 </body>
 </html>
+
+
 
 
 
