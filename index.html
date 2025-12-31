@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prateek Rai | Video Editor · Social Media · Customer Support</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{
-box-sizing:border-box}
-html{
-scroll-behavior:smooth}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
@@ -18,7 +17,8 @@ color:#f8fafc;
 font-weight:600;
 overflow-x:hidden;
 }
-/* HEADER */
+
+/* HEADER (UNCHANGED STYLE) */
 header{
 padding:40px 20px;
 text-align:center;
@@ -32,373 +32,225 @@ animation:gradientMove 12s ease infinite;
 100%{background-position:0% 50%}
 }
 header img{
-width:150;height:150;border-radius:050%animation:rotateAndFloat 6s ease-in-out infinite;box-shadow:0 10px 40px rgba(37,99,235,0.5);filter:drop-shadow(0 0 15px rgba(250,204,21,0.3));
+width:150px;
+height:150px;
+border-radius:50%;
+animation:rotateAndFloat 6s ease-in-out infinite;
+box-shadow:0 10px 40px rgba(37,99,235,0.5);
 margin-bottom:20px;
 object-fit:cover;
 }
-  @keyframes rotateAndFloat{0%{transform:translateY(0) rotate(0deg);opacity:0.8}25%{transform:translateY(-15px) rotate(5deg);opacity:1}50%{transform:translateY(0) rotate(0deg);opacity:1}75%{transform:translateY(-15px) rotate(-5deg);opacity:1}100%{transform:translateY(0) rotate(0deg);opacity:0.8}}
+@keyframes rotateAndFloat{
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
+}
 header h1{
-font-size:2rem;
+font-size:2.2rem;
 margin:10px 0;
 font-weight:800;
-color:#fff;
-text-shadow:2px 2px 4px rgba(0,0,0,0.3);
 }
 header p{
-font-size:1.2rem;
-margin:0;
+font-size:1.1rem;
 color:#0b1220;
-font-weight:600;
 }
-.cta-btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 35px;
-background:#000;
-color:#fff;
-border-radius:50px;
+
+nav{
+margin-top:25px;
+}
+nav a{
+color:#000;
+background:#fff;
+padding:10px 18px;
+border-radius:30px;
 text-decoration:none;
-font-weight:600;
-transition:0.3s;
+font-weight:700;
+margin:6px;
+display:inline-block;
 }
-.cta-btn:hover{
-background:#333;
-transform:scale(1.05);
-}
+
 /* SECTIONS */
 section{
-padding:60px 20px;
+padding:70px 20px;
 max-width:1000px;
-margin:0 auto;
+margin:auto;
 }
 section h2{
-font-size:2.2rem;
-margin-bottom:30px;
-padding-bottom:15px;
+font-size:2.1rem;
+margin-bottom:25px;
 border-bottom:3px solid #2563eb;
+padding-bottom:10px;
 }
-.about-text{
-font-size:1.1rem;
+
+.text{
+font-size:1.05rem;
 line-height:1.8;
 color:#d1d5db;
-margin-bottom:20px;
 }
-/* SERVICES */
-.services{
-background:#1a2332;
-}
-.service-card{
+
+/* CARDS */
+.card{
 background:#0f1419;
 padding:25px;
-margin:15px 0;
 border-left:4px solid #2563eb;
-border-radius:5px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+border-radius:6px;
+margin:18px 0;
+box-shadow:0 6px 14px rgba(0,0,0,0.35);
 }
-.service-card h3{
-font-size:1.3rem;
-color:#2563eb;
-margin-top:0;
-}
+
 /* PORTFOLIO */
-.portfolio-container{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
-margin-top:30px;
 }
-.portfolio-item{
-background:#1a2332;
-border-radius:8px;
-overflow:hidden;
-box-shadow:0 6px 15px rgba(0,0,0,0.4);
-transition:transform 0.3s;
-}
-.portfolio-item:hover{
-transform:translateY(-5px);
-}
-.portfolio-video{
+video{
 width:100%;
-height:200px;
-background:#0f1419;
+border-radius:6px;
 }
-.portfolio-info{
-padding:20px;
-}
-.portfolio-info h3{
-margin:0 0 10px;
-font-size:1.1rem;
-color:#2563eb;
-}
-.portfolio-meta{
-font-size:0.9rem;
-color:#9ca3af;
-line-height:1.6;
-}
-/* TESTIMONIALS */
-.testimonials{
-background:#1a2332;
-}
-.testimonial-card{
-background:#0f1419;
-padding:25px;
-margin:20px 0;
-border-radius:5px;
-border-left:4px solid #facc15;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-.testimonial-text{
-font-size:1rem;
-color:#d1d5db;
-font-style:italic;
-margin:0 0 15px;
-line-height:1.6;
-}
-.testimonial-author{
-font-weight:700;
-color:#fff;
-}
-.testimonial-title{
-font-size:0.9rem;
-color:#9ca3af;
-}
+
 /* FOOTER */
 footer{
-padding:40px 20px;
+padding:50px 20px;
 text-align:center;
-background:#0b1220;
 border-top:2px solid #1a2332;
 }
-.contact-info{
-margin:20px 0;
-}
-.contact-link{
+a.contact{
 color:#2563eb;
 text-decoration:none;
-font-weight:600;
-margin:0 15px;
-display:inline-block;
-}
-.contact-link:hover{
-text-decoration:underline;
-color:#facc15;
-}
-.footer-text{
-font-size:0.9rem;
-color:#6b7280;
-margin:0;
-}
-@media(max-width:768px){
-header h1{
-font-size:2.2rem;
-}
-header p{
-font-size:1rem;
-}
-section h2{
-font-size:1.8rem;
-}
-.portfolio-container{
-grid-template-columns:1fr;
-}
-.contact-link{
+font-weight:700;
 display:block;
 margin:10px 0;
 }
-}
-  /* HEAVY ANIMATIONS */
-.service-card{
-animation:slideInUp 0.8s ease-out backwards, floatHeavy 4s ease-in-out infinite;
-}
-@keyframes slideInUp{
-0%{opacity:0;transform:translateY(40px)}
-100%{opacity:1;transform:translateY(0)}
-}
-@keyframes floatHeavy{
-0%{transform:translateY(0px) scale(1)}
-25%{transform:translateY(-15px) scale(1.02)}
-50%{transform:translateY(0px) scale(1)}
-75%{transform:translateY(-15px) scale(1.02)}
-100%{transform:translateY(0px) scale(1)}
-}
-@keyframes pulseGlow{
-0%{box-shadow:0 0 10px rgba(37,99,235,0.3)}
-50%{box-shadow:0 0 30px rgba(37,99,235,0.8)}
-100%{box-shadow:0 0 10px rgba(37,99,235,0.3)}
-}
-.portfolio-item{
-animation:fadeInScale 0.9s ease-out;
-}
-@keyframes fadeInScale{
-0%{opacity:0;transform:scale(0.95)}
-100%{opacity:1;transform:scale(1)}
-}
-section h2{
-animation:slideDown 0.7s ease-out;
-}
-@keyframes slideDown{
-0%{opacity:0;transform:translateY(-30px)}
-100%{opacity:1;transform:translateY(0)}
-}
-
 </style>
 </head>
+
 <body>
+
 <header>
-  <img src="profile.jpg" alt="Prateek Rai Profile">
+<img src="profile.jpg" alt="Prateek Rai">
 <h1>Prateek Rai</h1>
 <p>Video Editor · Social Media Handler · Customer Support Professional</p>
-<a href="#contact" class="cta-btn">Work With Me</a>
+
+<nav>
+<a href="#overview">Overview</a>
+<a href="#video">Video Editing</a>
+<a href="#social">Social Media</a>
+<a href="#support">Customer Support</a>
+<a href="#proof">Experience</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section id="about">
-<h2>About Me</h2>
-<p class="about-text">
-Short-form video editor focused on watch-time, engagement and growth. I don't edit to look cool — I edit so viewers stay. With 1.5+ years of experience delivering high-volume support and video content across multiple platforms, I combine technical expertise with a product mindset to create results.
+<!-- OVERVIEW -->
+<section id="overview">
+<h2>Professional Overview</h2>
+<p class="text">
+Multi-disciplinary professional with hands-on experience in <strong>short-form video editing, social media handling, and high-volume customer support operations</strong>. Known for reliability, fast execution, and result-driven performance across digital platforms.
 </p>
-<p class="about-text">
-<strong>Core Strengths:</strong><br>
-✓ High-retention short-form edits (Reels, Shorts, TikTok)<br>
-✓ Fast turnaround: 5-10 minute average resolution time<br>
-✓ Multi-platform customer support (95+ CSAT score)<br>
-✓ Bilingual: English & Hindi<br>
-✓ Data-driven: 98% accuracy, 100+ daily resolutions<br>
-✓ Promoted twice in 9 months (proven reliability)
+
+<div class="card">
+✓ 1.5+ years professional experience<br>
+✓ High-retention short-form content creation<br>
+✓ 95%+ CSAT in customer support roles<br>
+✓ English & Hindi communication<br>
+✓ Process-driven & performance focused
+</div>
+</section>
+
+<!-- VIDEO EDITING -->
+<section id="video">
+<h2>Video Editing (Primary Skill)</h2>
+<p class="text">
+Short-form video editor focused on viewer retention, hook psychology, pacing, and engagement. I edit content to <strong>keep viewers watching</strong>, not just to look good.
+</p>
+
+<div class="card">
+✓ Instagram Reels / YouTube Shorts / TikTok<br>
+✓ Hook-first editing strategy<br>
+✓ Fast turnaround & consistent quality<br>
+✓ Optimized captions & pacing
+</div>
+
+<div class="grid">
+<video controls src="1.mp4"></video>
+<video controls src="2.mp4"></video>
+<video controls src="3.mp4"></video>
+</div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="social">
+<h2>Social Media Handling</h2>
+<p class="text">
+End-to-end social media handling including content planning, posting schedules, engagement handling, and analytics tracking. Focused on consistency, growth, and audience trust.
+</p>
+
+<div class="card">
+✓ Content calendar management<br>
+✓ Audience engagement & DM handling<br>
+✓ Platform optimization (Instagram, YouTube)<br>
+✓ Performance tracking mindset
+</div>
+
+<p class="text">
+Worked with content-driven pages and brands to maintain posting discipline and audience interaction standards.
 </p>
 </section>
 
-<section class="services">
-<h2>What I Offer</h2>
-<div class="service-card">
-<h3>Short-Form Video Editing</h3>
-<p>High-retention reels and shorts optimized for YouTube, Instagram, and TikTok. Fast TAT, consistent hooks, and viewer psychology built in.</p>
+<!-- CUSTOMER SUPPORT -->
+<section id="support">
+<h2>Customer Support Professional</h2>
+<p class="text">
+Experienced in high-volume customer support operations across chat, email, and voice. Strong understanding of ticket resolution, escalation handling, and customer satisfaction metrics.
+</p>
+
+<div class="card">
+✓ 100+ tickets handled daily<br>
+✓ 98% accuracy & quality adherence<br>
+✓ 95%+ CSAT score<br>
+✓ Tools: Zendesk, Freshdesk, WhatsApp, Email
 </div>
-<div class="service-card">
-<h3>Social Media Management</h3>
-<p>Content strategy, posting schedule optimization, and audience engagement across Instagram, YouTube, and other platforms.</p>
-</div>
-<div class="service-card">
-<h3>Customer Support Operations</h3>
-<p>24/7 chat/voice support, ticketing system management, escalation handling, and team coordination across Freshdesk, Zendesk, WhatsApp, and email.</p>
-</div>
-<div class="service-card">
-<h3>Video Research & Scripts</h3>
-<p>Full-cycle video production: scripting, editing, and thumbnail/hook optimization for maximum impact.</p>
-</div>
-  <div class="service-card">
-<h3>Digital Marketing & Campaign Strategy</h3>
-<p>Strategic content planning, market analysis, audience targeting, and campaign execution across social platforms. Data-driven approach to maximize reach, engagement, and conversion rates with measurable results.</p>
-</div>
-<div class="service-card">
-<h3>Social Media Handling & Community Management</h3>
-<p>End-to-end social media management including content creation, posting schedules, audience engagement, hashtag optimization, analytics tracking, and community growth strategy across Instagram, TikTok, YouTube, and other platforms.</p>
+
+<div class="card">
+<strong>Professional Highlights:</strong><br>
+• Promoted twice within 9 months<br>
+• Trusted for complex case handling<br>
+• Strong communication & escalation control
 </div>
 </section>
 
-<section id="portfolio">
-<h2>Sample Work</h2>
-<div class="portfolio-container">
-<div class="portfolio-item">
-<video class="portfolio-video" controls>
-<source src="1.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="portfolio-info">
-<h3>Finance Reel</h3>
-<p class="portfolio-meta"><strong>Category:</strong> Educational<br><strong>Focus:</strong> High retention, quick hooks<br><strong>Platform:</strong> YouTube Shorts, Instagram Reels</p>
+<!-- EXPERIENCE -->
+<section id="proof">
+<h2>Experience & Proof</h2>
+
+<div class="card">
+<strong>EdTech / SaaS Support Projects</strong><br>
+Handled end-user queries, issue resolution, and follow-ups while maintaining quality and SLA compliance.
 </div>
+
+<div class="card">
+<strong>Content & Editing Projects</strong><br>
+Delivered short-form content optimized for engagement and watch-time across multiple niches.
 </div>
-<div class="portfolio-item">
-<video class="portfolio-video" controls>
-<source src="2.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="portfolio-info">
-<h3>Social Engagement Video</h3>
-<p class="portfolio-meta"><strong>Category:</strong> Entertainment<br><strong>Focus:</strong> Viewer retention & shareability<br><strong>Platform:</strong> TikTok, Instagram Reels</p>
-</div>
-</div>
-<div class="portfolio-item">
-<video class="portfolio-video" controls>
-<source src="3.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="portfolio-info">
-<h3>Product Demo</h3>
-<p class="portfolio-meta"><strong>Category:</strong> Product<br><strong>Focus:</strong> Clear messaging, fast-paced<br><strong>Platform:</strong> YouTube Shorts</p>
-</div>
-</div>
-<div class="portfolio-item">
-<video class="portfolio-video" controls>
-<source src="4.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="portfolio-info">
-<h3>Testimonial Video</h3>
-<p class="portfolio-meta"><strong>Category:</strong> Case Study<br><strong>Focus:</strong> Credibility, impact<br><strong>Platform:</strong> Instagram, LinkedIn</p>
-</div>
-</div>
-<div class="portfolio-item">
-<video class="portfolio-video" controls>
-<source src="5.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="portfolio-info">
-<h3>Tutorial Video</h3>
-<p class="portfolio-meta"><strong>Category:</strong> Educational<br><strong>Focus:</strong> Step-by-step clarity<br><strong>Platform:</strong> YouTube, TikTok</p>
-</div>
-</div>
-<div class="portfolio-item">
-<video class="portfolio-video" controls>
-<source src="6.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="portfolio-info">
-<h3>Community Highlight</h3>
-<p class="portfolio-meta"><strong>Category:</strong> Social Proof<br><strong>Focus:</strong> Authentic, relatable<br><strong>Platform:</strong> Instagram Stories, Reels</p>
-</div>
-</div>
+
+<div class="card">
+<strong>Professional Reliability</strong><br>
+Repeated promotions and leadership trust due to consistency, accountability, and performance.
 </div>
 </section>
 
-<section class="testimonials">
-<h2>What Clients Say</h2>
-<div class="testimonial-card">
-<p class="testimonial-text">"Prateek delivers fast, professional edits with a real focus on retention. Turned our raw footage into content that actually keeps viewers watching."</p>
-<p class="testimonial-author">StockTutor Team</p>
-<p class="testimonial-title">EdTech Platform</p>
-</div>
-<div class="testimonial-card">
-<p class="testimonial-text">"Handled 100+ daily support cases with 98% accuracy. Calm, professional, and always thinking about user experience."</p>
-<p class="testimonial-author">Tech-Fi Technologies</p>
-<p class="testimonial-title">SaaS Customer Support Lead</p>
-</div>
-<div class="testimonial-card">
-<p class="testimonial-text">"Prateek was promoted twice in 9 months. That says everything about reliability, work quality, and attitude."</p>
-<p class="testimonial-author">Energizer IT Services</p>
-<p class="testimonial-title">Vendor & Returns Manager</p>
-</div>
-</section>
-
+<!-- CONTACT -->
 <footer id="contact">
-<h2>Get In Touch</h2>
-<p class="about-text">Ready to elevate your content? Let's talk.</p>
-<div class="contact-info">
-<a href="mailto:hello@prateekcreates.in" class="contact-link">📧 hello@prateekcreates.in</a><br>
-<a href="https://instagram.com/prateekcreates.in" class="contact-link" target="_blank">📱 Instagram: @prateekcreates.in</a><br>
-<a href="https://wa.me/917011833533" class="contact-link" target="_blank">💬 WhatsApp: +91 7011833533</a><br>
-<a href="https://wa.me/919899102809" class="contact-link" target="_blank">💬 WhatsApp: +91 9899102809</a><br>
-<a href="tel:7011833533" class="contact-link">☎️ Call: +91 7011833533</a>
-</div>
-<p class="footer-text">Available for freelance projects, retainer work, and full-time opportunities.</p>
-<p class="footer-text">&copy; 2025 Prateek Rai. All rights reserved.</p>
+<h2>Contact</h2>
+
+<a class="contact" href="mailto:hello@prateekcreates.in">📧 hello@prateekcreates.in</a>
+<a class="contact" href="https://instagram.com/prateekcreates.in" target="_blank">📱 Instagram</a>
+<a class="contact" href="https://wa.me/917011833533" target="_blank">💬 WhatsApp</a>
+<a class="contact" href="tel:7011833533">☎️ Call</a>
+
+<p style="color:#6b7280;font-size:0.9rem;">Available for freelance, contract, and full-time roles</p>
 </footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
