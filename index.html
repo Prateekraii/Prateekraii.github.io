@@ -32,11 +32,11 @@ animation:gradientMove 12s ease infinite;
 100%{background-position:0% 50%}
 }
 header img{
-width:150px;
-height:150px;
+width:190px;
+height:190px;
 border-radius:50%;
 animation:rotateAndFloat 6s ease-in-out infinite;
-box-shadow:0 10px 40px rgba(37,99,235,0.5);
+box-shadow:0 15px 45px rgba(37,99,235,0.55);
 margin-bottom:20px;
 object-fit:cover;
 }
@@ -162,20 +162,64 @@ Multi-disciplinary professional with <strong>1.5+ years of hands-on experience i
 <section id="video">
 <h2>Video Editing (Primary Skill)</h2>
 <p class="text">
-Short-form video editor focused on viewer retention, hook psychology, pacing, and engagement. I edit content to keep viewers watching and interacting.
+I specialize in <strong>high-retention short-form video editing</strong> designed to stop scrolling in the first 2 seconds. 
+Every edit is built using hook psychology, fast pacing, visual patterns, captions, and sound design that keep viewers watching till the end.
 </p>
 
 <div class="card">
-✓ Instagram Reels / YouTube Shorts / TikTok<br>
-✓ Hook-first editing strategy<br>
-✓ Fast turnaround & consistency<br>
-✓ Captions, pacing & optimization
+<strong>Editing Style & Techniques:</strong><br>
+✓ Scroll-stopping hooks (first 1–2 seconds)<br>
+✓ Fast cuts & pattern breaks every 1.5–2 seconds<br>
+✓ Dynamic captions for silent viewers<br>
+✓ Zooms, punch-ins & visual emphasis<br>
+✓ Beat-based transitions & sound effects<br>
+✓ Platform-optimized aspect ratios (Reels / Shorts / TikTok)
 </div>
 
-<div class="grid">
+<div class="card">
+<strong>Why My Edits Perform:</strong><br>
+• Focused on watch-time, not just aesthetics<br>
+• Viewer psychology driven pacing<br>
+• Designed for shares, saves & replays<br>
+• Tested across multiple niches
+</div>
+
+  .horizontal-scroll{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding-bottom:10px;
+scroll-snap-type:x mandatory;
+}
+
+.horizontal-scroll video{
+min-width:260px;
+scroll-snap-align:start;
+flex-shrink:0;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+transition:transform 0.3s ease;
+}
+
+.horizontal-scroll video:hover{
+transform:scale(1.05);
+}
+
+.horizontal-scroll::-webkit-scrollbar{
+height:8px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb{
+background:#2563eb;
+border-radius:10px;
+}
+
+
+<div class="horizontal-scroll">
 <video controls src="1.mp4"></video>
 <video controls src="2.mp4"></video>
 <video controls src="3.mp4"></video>
+<video controls src="4.mp4"></video>
+<video controls src="5.mp4"></video>
+<video controls src="6.mp4"></video>
 </div>
 </section>
 
@@ -262,3 +306,4 @@ After seller process ramp-down on July 31, joined Tech-Fi Technologies to suppor
 
 </body>
 </html>
+
